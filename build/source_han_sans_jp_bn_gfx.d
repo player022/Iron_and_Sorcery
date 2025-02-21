@@ -1,0 +1,1 @@
+source_han_sans_jp_bn_gfx.o: source_han_sans_jp_bn_gfx.s
