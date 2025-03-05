@@ -10,10 +10,11 @@
 
 // 根据 ID 生成对应的精灵
 Item_map::Item_map(int id, int x, int y)
-	: _id(id), _x(x), _y(y),
-    _little_sprite(create_little_sprite(id, x, y))
+	: _id(id), _x(64-x), _y(64-y),
+    _little_sprite(create_little_sprite(id))
 {
-	
+	_little_sprite.set_z_order(y);
+	BN_LOG("ID为：", _id, "的精灵优先度为：", y);
 }
 
 void Item_map::set_visible(bool in_inventory)
@@ -39,7 +40,7 @@ bool Item_map::update_position(int x, int y)
 }
 
 // 根据 ID 生成地图上的小精灵
-bn::sprite_ptr Item_map::create_little_sprite(int id, int x, int y)
+bn::sprite_ptr Item_map::create_little_sprite(int id)
 {
 	switch (id)
 	{

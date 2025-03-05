@@ -13,6 +13,7 @@
 #include "bn_affine_bg_tiles_items_tiles.h"
 
 #include "item_map.h"
+#include "human.h"
 
 #include <vector>
 
@@ -33,16 +34,22 @@ class Map
 {
 public:
 	std::vector<std::optional<Item_map>> items;
+	std::vector<std::optional<Human>> humans;
 
 	static constexpr int columns = 64;
 	static constexpr int rows = 64;
 	static constexpr int cells_count = columns * rows;
 
+	bool _walkable_cells[rows+1][columns+1]; // 直接用二维数组存储可通行性
+
 	Map(); // 构造函数
 
-	void update(int x, int y);
+	void update(int x, int y); // 更新函数，包括了地图和其上物品的更新
+	bool can_move(int x, int y); // 检查是否可以通过的函数
 
 	bn::affine_bg_map_item get_map_item() const { return _map_item; }
+
+	void change_tile_color(int x, int y);
 
 	static int sprite_x(int cursor_x)
 	{

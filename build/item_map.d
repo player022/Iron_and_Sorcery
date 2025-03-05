@@ -79,6 +79,7 @@ item_map.o: \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h \
  D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_map.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/human.h \
  D:/GBA/butano-master/butano/include/bn_keypad.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_little_cutlass.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_shrub.h \
@@ -165,6 +166,7 @@ D:/GBA/butano-master/butano/include/bn_bg_palette_item.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h:
 D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_map.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/human.h:
 D:/GBA/butano-master/butano/include/bn_keypad.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_little_cutlass.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_shrub.h:

@@ -1,4 +1,4 @@
-#ifndef ITEM_MAP_H
+ï»¿#ifndef ITEM_MAP_H
 #define ITEM_MAP_H
 
 #include "bn_sprite_ptr.h"
@@ -13,32 +13,32 @@ class Item_map
 {
 public:
 	int width, height;
-	bool can_pickup; // ÊÇ·ñ¿ÉÊ°È¡
-	bn::string_view pickup_message; // Ê°È¡ÌáÊ¾ÏûÏ¢
+	bool can_pickup; // æ˜¯å¦å¯æ‹¾å–
+	bn::string_view pickup_message; // æ‹¾å–æç¤ºæ¶ˆæ¯
 
 
 	Item_map(int id, int x, int y);
 
 	void set_visible(bool in_inventory);
-	bool update_position(int x, int y); //¸üĞÂÎ»ÖÃ
-	void show_pickup_prompt(bool show); // ÏÔÊ¾Ê°È¡ÌáÊ¾
+	bool update_position(int x, int y); //æ›´æ–°ä½ç½®
+	void show_pickup_prompt(bool show); // æ˜¾ç¤ºæ‹¾å–æç¤º
 
 	int id() const { return _id; }
 
 private:
 	int _id;
 	int _x, _y;
-	bn::sprite_ptr _little_sprite; // µØÍ¼ÉÏµÄĞ¡ÎïÆ·
+	bn::sprite_ptr _little_sprite; // åœ°å›¾ä¸Šçš„å°ç‰©å“
 
 	bn::vector<bn::sprite_ptr, 128>text_sprites;
 
-	bn::optional<common::info> pickup_info; // ÈÃÌáÊ¾ÔÚÀàµÄÉúÃüÖÜÆÚÄÚ³ÖĞø´æÔÚ
+	bn::optional<common::info> pickup_info; // è®©æç¤ºåœ¨ç±»çš„ç”Ÿå‘½å‘¨æœŸå†…æŒç»­å­˜åœ¨
 	bool pickup_prompt_visible = false;
 
-	//std::function<void(Item_map&)> on_pickup;  // »Øµ÷º¯Êı£¬µ±ÎïÆ·±»¼ñÆğÊ±´¥·¢
+	//std::function<void(Item_map&)> on_pickup;  // å›è°ƒå‡½æ•°ï¼Œå½“ç‰©å“è¢«æ¡èµ·æ—¶è§¦å‘
 
-	// ¸ù¾İ ID Éú³ÉµØÍ¼ÉÏµÄĞ¡¾«Áé
-	bn::sprite_ptr create_little_sprite(int id, int x, int y);
+	// æ ¹æ® ID ç”Ÿæˆåœ°å›¾ä¸Šçš„å°ç²¾çµ
+	bn::sprite_ptr create_little_sprite(int id);
 
 };
 

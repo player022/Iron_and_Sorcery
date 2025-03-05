@@ -77,7 +77,9 @@ int main()
 		if (game_state == GameState::Playing)
 		{
 			if (bn::keypad::select_pressed()) {
-				player.change_equipment(1);
+				//player.change_equipment(1);
+				//player.take_damage(10);
+				map.change_tile_color(32, 32);
 			}
 			// 只有在不处于跳跃状态时才能接受移动输入
 			if (player.can_move())
@@ -97,8 +99,11 @@ int main()
 				{
 					if (key_hold_counter == 0 || (key_hold_counter >= long_press_threshold && key_hold_counter % move_interval == 0))
 					{
-						cursor_x += move_x;
-						cursor_y += move_y;
+						/* 先检查是否可通行 */
+						if (map.can_move(cursor_x + move_x, cursor_y + move_y)) {
+							cursor_x += move_x;
+							cursor_y += move_y;
+						}
 						moved = true;
 					}
 					key_hold_counter++;
@@ -113,7 +118,8 @@ int main()
 			{
 				player.start_jump();  // 触发跳跃效果
 			}
-
+			//BN_LOG("cursor_x", cursor_x, "cursor_y", cursor_y);
+			player.update_priority(cursor_y);
 			map.update(cursor_x, cursor_y);
 		}
 

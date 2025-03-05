@@ -3,6 +3,11 @@
 
 #include "bn_sprite_ptr.h"
 
+#include "common_info.h"
+#include "source_han_sans_jp_sprite_font.h"
+
+#include "bn_sprite_text_generator.h"
+
 class Player
 {
 public:
@@ -23,13 +28,31 @@ public:
 	// 翻转
 	void horizontal_flip(bool direction);
 
+	//更新优先度
+	void update_priority(int y);
+
 	// 根据装备 ID 切换装备
 	void change_equipment(int equipment_id);
+
+	int get_hp() const { return _hp; }  // 获取当前生命值
+
+	void take_damage(int damage); // 受到伤害
+
+	void heal(int amount); // 恢复生命值
 
 private:
 	bn::sprite_ptr body_sprite;
 	bn::sprite_ptr foot_sprite;
 	bn::sprite_ptr head_sprite;
+
+	bn::optional<bn::sprite_ptr> left_weapon_sprite;
+	bn::optional<bn::sprite_ptr> right_weapon_sprite;
+
+	int _hp = 100;
+
+	bn::vector<bn::sprite_ptr, 128>text_sprites;
+	bn::sprite_text_generator text_generator;
+	void update_hp_text(); // 生命值更新方法
 
 	bn::fixed _x;
 	bn::fixed _y;

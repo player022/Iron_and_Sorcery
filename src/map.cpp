@@ -1,6 +1,7 @@
 #include "map.h"
 
 #include "bn_keypad.h"
+#include "bn_log.h"
 
 // 构造函数
 Map::Map() :
@@ -15,9 +16,20 @@ Map::Map() :
 
 void Map::update(int x, int y)
 {
-	_bg.set_position(sprite_x(x)-4, sprite_y(y)+2);
-	update_items(x, y);
+    _bg.set_position(sprite_x(x) - 4, sprite_y(y) + 2);
+    update_items(x, y);
 }
+
+bool Map::can_move(int x, int y)
+{
+	if (x < 1 || x > columns || y < 1 || y > rows)
+	{
+		return false; // 超出边界，不能移动
+	}
+
+	return _walkable_cells[x][y]; // 返回是否可通行
+}
+
 
 // 生成随机地形
 int Map::_generate_random_tile()
@@ -65,6 +77,8 @@ bn::affine_bg_ptr Map::_initialize()
 			current_cell_info.set_tile_index(tile_index);
 
 			current_cell = current_cell_info.cell();
+			// 默认所有格子可通行
+			_walkable_cells[y+1][x+1] = true;
 		}
 	}
 	// 初始化背景
@@ -77,14 +91,18 @@ bn::affine_bg_ptr Map::_initialize()
 void Map::_initialize_items()
 {
 	std::optional<Item_map> item1;
-	item1.emplace(1, 30, 32);
+	item1.emplace(1, 34, 29);
 	items.push_back(item1);
 	std::optional<Item_map> item2;
-	item2.emplace(2, 34, 32);
+	item2.emplace(2, 34, 27);
+	_walkable_cells[34][27] = false;
 	items.push_back(item2);
 	std::optional<Item_map> item3;
-	item3.emplace(3, 34, 32);
+	item3.emplace(3, 34, 27);
 	items.push_back(item3);
+	std::optional<Human> human1;
+	human1.emplace(35, 35);
+	humans.push_back(human1);
 }
 
 void Map::update_items(int x, int y)
@@ -109,6 +127,36 @@ void Map::update_items(int x, int y)
 		}
 		return false; // 保留此物品
 	});
+	// 使用 erase_if 
+	std::erase_if(humans, [&](std::optional<Human>& human)
+	{
+		if (human) // 确保 item 存在
+		{
+			human->start_jump();
+			human->update_position(x - columns, y - rows);
+		}
+		return false; // 保留此物品
+	});
+}
+
+
+void Map::change_tile_color(int x, int y)
+{
+	// 检查坐标是否在有效范围内
+	if (x < 0 || x >= columns || y < 0 || y >= rows)
+	{
+		return; // 超出范围，返回
+	}
+
+	// 获取指定坐标的地图单元格
+	bn::affine_bg_map_cell& current_cell = _cells[_map_item.cell_index(x, y)];
+	bn::affine_bg_map_cell_info current_cell_info(current_cell);
+
+	// 修改该单元格的调色板 ID（改变颜色）
+	current_cell_info.set_tile_index(5);
+
+	// 更新地图单元格
+	current_cell = current_cell_info.cell();
 }
 
 
