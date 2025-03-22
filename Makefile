@@ -1,4 +1,4 @@
-#---------------------------------------------------------------------------------------------------------------------
+﻿#---------------------------------------------------------------------------------------------------------------------
 # TARGET is the name of the output.
 # BUILD is the directory where object files & intermediate files will be placed.
 # LIBBUTANO is the main directory of butano library (https://github.com/GValiente/butano).
@@ -41,7 +41,7 @@ DMGAUDIO    	:=  dmg_audio ../../common/dmg_audio
 ROMTITLE    	:=  BUTANO DYRBG
 ROMCODE     	:=  SBTP
 FONTS           :=  ../../fonts/SourceHanSans/JP
-TEXTS           :=  src/item_map.cpp
+TEXTS           :=  src/door.cpp
 USERFLAGS   	:=  
 USERCXXFLAGS	:=  
 USERASFLAGS 	:=  

@@ -54,12 +54,16 @@ map.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/map.cpp \
  D:/GBA/butano-master/butano/include/bn_bg_palette_item.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h \
  D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_map.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item.h \
+ D:/GBA/butano-master/butano/include/bn_log.h \
+ D:/GBA/butano-master/butano/include/bn_config_log.h \
+ D:/GBA/butano-master/butano/include/bn_log_backend.h \
+ D:/GBA/butano-master/butano/include/bn_vector.h \
+ D:/GBA/butano-master/butano/include/bn_vector_fwd.h \
  D:/GBA/butano-master/butano/include/bn_sprite_ptr.h \
  D:/GBA/butano-master/butano/include/bn_string_view.h \
  D:/GBA/butano-master/butano/include/bn_sprite_text_generator.h \
  D:/GBA/butano-master/butano/include/bn_vector.h \
- D:/GBA/butano-master/butano/include/bn_vector_fwd.h \
  D:/GBA/butano-master/butano/include/bn_camera_ptr.h \
  D:/GBA/butano-master/butano/include/bn_sprite_font.h \
  D:/GBA/butano-master/butano/include/bn_sprite_item.h \
@@ -71,17 +75,13 @@ map.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/map.cpp \
  D:/GBA/butano-master/butano/include/bn_utf8_character.h \
  D:/GBA/butano-master/common/include/common_info.h \
  D:/GBA/butano-master/butano/include/bn_span.h \
- D:/GBA/butano-master/butano/include/bn_vector.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/source_han_sans_jp_sprite_font.h \
  D:/GBA/butano-master/butano/include/bn_sprite_font.h \
  D:/GBA/butano-master/butano/include/bn_utf8_characters_map.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_source_han_sans_jp.h \
  D:/GBA/butano-master/butano/include/bn_sprite_item.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/include/human.h \
- D:/GBA/butano-master/butano/include/bn_keypad.h \
- D:/GBA/butano-master/butano/include/bn_log.h \
- D:/GBA/butano-master/butano/include/bn_config_log.h \
- D:/GBA/butano-master/butano/include/bn_log_backend.h
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/doorObserver.h \
+ D:/GBA/butano-master/butano/include/bn_keypad.h
 D:/GBA/butano-master/examples/Iron_and_Sorcery/include/map.h:
 D:/GBA/butano-master/butano/include/bn_core.h:
 D:/GBA/butano-master/butano/include/bn_span.h:
@@ -137,12 +137,16 @@ D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_bg_palette_items_palette
 D:/GBA/butano-master/butano/include/bn_bg_palette_item.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h:
 D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_map.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item.h:
+D:/GBA/butano-master/butano/include/bn_log.h:
+D:/GBA/butano-master/butano/include/bn_config_log.h:
+D:/GBA/butano-master/butano/include/bn_log_backend.h:
+D:/GBA/butano-master/butano/include/bn_vector.h:
+D:/GBA/butano-master/butano/include/bn_vector_fwd.h:
 D:/GBA/butano-master/butano/include/bn_sprite_ptr.h:
 D:/GBA/butano-master/butano/include/bn_string_view.h:
 D:/GBA/butano-master/butano/include/bn_sprite_text_generator.h:
 D:/GBA/butano-master/butano/include/bn_vector.h:
-D:/GBA/butano-master/butano/include/bn_vector_fwd.h:
 D:/GBA/butano-master/butano/include/bn_camera_ptr.h:
 D:/GBA/butano-master/butano/include/bn_sprite_font.h:
 D:/GBA/butano-master/butano/include/bn_sprite_item.h:
@@ -154,14 +158,10 @@ D:/GBA/butano-master/butano/include/bn_power_of_two.h:
 D:/GBA/butano-master/butano/include/bn_utf8_character.h:
 D:/GBA/butano-master/common/include/common_info.h:
 D:/GBA/butano-master/butano/include/bn_span.h:
-D:/GBA/butano-master/butano/include/bn_vector.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/source_han_sans_jp_sprite_font.h:
 D:/GBA/butano-master/butano/include/bn_sprite_font.h:
 D:/GBA/butano-master/butano/include/bn_utf8_characters_map.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_source_han_sans_jp.h:
 D:/GBA/butano-master/butano/include/bn_sprite_item.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/include/human.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/doorObserver.h:
 D:/GBA/butano-master/butano/include/bn_keypad.h:
-D:/GBA/butano-master/butano/include/bn_log.h:
-D:/GBA/butano-master/butano/include/bn_config_log.h:
-D:/GBA/butano-master/butano/include/bn_log_backend.h:

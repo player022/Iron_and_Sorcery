@@ -77,8 +77,11 @@ player.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/player.cpp \
  D:/GBA/butano-master/butano/include/bn_bg_palette_item.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h \
  D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_map.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/include/human.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item.h \
+ D:/GBA/butano-master/butano/include/bn_log.h \
+ D:/GBA/butano-master/butano/include/bn_config_log.h \
+ D:/GBA/butano-master/butano/include/bn_log_backend.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/doorObserver.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_head.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_body.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_foot.h \
@@ -165,8 +168,11 @@ D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_bg_palette_items_palette
 D:/GBA/butano-master/butano/include/bn_bg_palette_item.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h:
 D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_map.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/include/human.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item.h:
+D:/GBA/butano-master/butano/include/bn_log.h:
+D:/GBA/butano-master/butano/include/bn_config_log.h:
+D:/GBA/butano-master/butano/include/bn_log_backend.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/doorObserver.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_head.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_body.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_foot.h:

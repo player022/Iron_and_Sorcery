@@ -32,9 +32,8 @@ menu.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/menu.cpp \
  D:/GBA/butano-master/butano/include/bn_fixed_point.h \
  D:/GBA/butano-master/butano/include/bn_point.h \
  D:/GBA/butano-master/butano/include/bn_fixed_point_fwd.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_map.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_bag.h \
  D:/GBA/butano-master/butano/include/bn_sprite_ptr.h \
- D:/GBA/butano-master/butano/include/bn_string_view.h \
  D:/GBA/butano-master/butano/include/bn_sprite_text_generator.h \
  D:/GBA/butano-master/butano/include/bn_vector.h \
  D:/GBA/butano-master/butano/include/bn_vector_fwd.h \
@@ -54,14 +53,12 @@ menu.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/menu.cpp \
  D:/GBA/butano-master/common/include/common_info.h \
  D:/GBA/butano-master/butano/include/bn_span.h \
  D:/GBA/butano-master/butano/include/bn_vector.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/build/source_han_sans_jp_sprite_font.h \
+ D:/GBA/butano-master/butano/include/bn_string_view.h \
+ D:/GBA/butano-master/common/include/common_variable_8x16_sprite_font.h \
  D:/GBA/butano-master/butano/include/bn_sprite_font.h \
  D:/GBA/butano-master/butano/include/bn_utf8_characters_map.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_source_han_sans_jp.h \
- D:/GBA/butano-master/butano/include/bn_sprite_item.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_bag.h \
- D:/GBA/butano-master/common/include/common_variable_8x16_sprite_font.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_common_variable_8x16_font.h \
+ D:/GBA/butano-master/butano/include/bn_sprite_item.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_regular_bg_items_menu.h \
  D:/GBA/butano-master/butano/include/bn_regular_bg_item.h \
  D:/GBA/butano-master/butano/include/bn_bg_palette_item.h \
@@ -105,9 +102,8 @@ D:/GBA/butano-master/butano/include/bn_regular_bg_ptr.h:
 D:/GBA/butano-master/butano/include/bn_fixed_point.h:
 D:/GBA/butano-master/butano/include/bn_point.h:
 D:/GBA/butano-master/butano/include/bn_fixed_point_fwd.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_map.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_bag.h:
 D:/GBA/butano-master/butano/include/bn_sprite_ptr.h:
-D:/GBA/butano-master/butano/include/bn_string_view.h:
 D:/GBA/butano-master/butano/include/bn_sprite_text_generator.h:
 D:/GBA/butano-master/butano/include/bn_vector.h:
 D:/GBA/butano-master/butano/include/bn_vector_fwd.h:
@@ -127,14 +123,12 @@ D:/GBA/butano-master/butano/include/bn_utf8_character.h:
 D:/GBA/butano-master/common/include/common_info.h:
 D:/GBA/butano-master/butano/include/bn_span.h:
 D:/GBA/butano-master/butano/include/bn_vector.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/build/source_han_sans_jp_sprite_font.h:
+D:/GBA/butano-master/butano/include/bn_string_view.h:
+D:/GBA/butano-master/common/include/common_variable_8x16_sprite_font.h:
 D:/GBA/butano-master/butano/include/bn_sprite_font.h:
 D:/GBA/butano-master/butano/include/bn_utf8_characters_map.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_source_han_sans_jp.h:
-D:/GBA/butano-master/butano/include/bn_sprite_item.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item_bag.h:
-D:/GBA/butano-master/common/include/common_variable_8x16_sprite_font.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_common_variable_8x16_font.h:
+D:/GBA/butano-master/butano/include/bn_sprite_item.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_regular_bg_items_menu.h:
 D:/GBA/butano-master/butano/include/bn_regular_bg_item.h:
 D:/GBA/butano-master/butano/include/bn_bg_palette_item.h:

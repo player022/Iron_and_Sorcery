@@ -7,7 +7,6 @@
 #include "bn_core.h"
 #include "bn_regular_bg_ptr.h"
 
-#include "item_map.h"
 #include "item_bag.h"
 #include <vector>  
 
@@ -19,7 +18,7 @@ public:
 	//void pickup_item(Item_map& item)
 	//{
 	//}
-	bool check_space(int x, int y, const Item_map& item); //判断背包能否放的下物品
+	//bool check_space(int x, int y, const Item_map& item); //判断背包能否放的下物品
 	//void place_item(int x, int y, const Item& item); //放置物品
 	//void remove_item(int x, int y, const Item& item); //移动物品
 	//bool add_item_to_inventory(const Item& item); // 添加物品到背包（实际背包管理）

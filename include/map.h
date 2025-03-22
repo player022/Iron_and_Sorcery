@@ -12,65 +12,52 @@
 #include "bn_bg_palette_items_palette.h"
 #include "bn_affine_bg_tiles_items_tiles.h"
 
-#include "item_map.h"
-#include "human.h"
+#include "item.h"
+#include "doorObserver.h"
 
 #include <vector>
 
-// 地形索引常量
-namespace
-{
-	constexpr int grassland_tile_index1 = 0;
-	constexpr int grassland_tile_index2 = 1;
-	constexpr int grassland_tile_index3 = 2;
-	constexpr int grassland_stoneroad_tile_index1 = 3;
-	constexpr int grassland_stoneroad_tile_index2 = 4;
-	constexpr int grassland_stoneroad_tile_index3 = 5;
-	constexpr int grassland_stoneroad_tile_index4 = 6;
-	constexpr int grassland_stoneroad_tile_index5 = 7;
-}
-
-class Map
+class Map : public DoorObserver
 {
 public:
-	std::vector<std::optional<Item_map>> items;
-	std::vector<std::optional<Human>> humans;
+	int columns;  // 动态列数
+	int rows;     // 动态行数
+	static constexpr int cells_count = 64 * 64; // 最多64*64的单元数，但会根据实际大小调整
 
-	static constexpr int columns = 64;
-	static constexpr int rows = 64;
-	static constexpr int cells_count = columns * rows;
+	bool _walkable_cells[64 + 1][64 + 1]; // 使用最大64的数组，超出部分需要动态调整
 
-	bool _walkable_cells[rows+1][columns+1]; // 直接用二维数组存储可通行性
+	// 构造函数，接受地图数据
+	Map(const std::vector<std::vector<int>>& map_data);
 
-	Map(); // 构造函数
-
-	void update(int x, int y); // 更新函数，包括了地图和其上物品的更新
-	bool can_move(int x, int y); // 检查是否可以通过的函数
+	void add_item(std::shared_ptr<Item> item);
+	void update(int x, int y);
+	bool can_move(int x, int y);
 
 	bn::affine_bg_map_item get_map_item() const { return _map_item; }
 
-	void change_tile_color(int x, int y);
-
-	static int sprite_x(int cursor_x)
+	void on_door_state_changed(int x, int y, bool is_open) override
 	{
-		return (cursor_x * 8) - (columns * 4) + 4;
+		_walkable_cells[x][y] = is_open;
 	}
 
-	static int sprite_y(int cursor_y)
+	int sprite_x(int cursor_x)
 	{
-		return (cursor_y * 8) - (rows * 4) - 2;
+		return (cursor_x * 8) - (columns * 4);
+	}
+
+	int sprite_y(int cursor_y)
+	{
+		return (cursor_y * 8) - (rows * 4);
 	}
 
 private:
-	alignas(int) bn::affine_bg_map_cell _cells[cells_count]; // 地图格子
+	std::vector<std::shared_ptr<Item>> items;
+	alignas(int) bn::affine_bg_map_cell _cells[cells_count];
 	bn::affine_bg_map_item _map_item;
-	bn::affine_bg_ptr _bg; // 背景
-	bn::random _random;
+	bn::affine_bg_ptr _bg;
 
-	bn::affine_bg_ptr _initialize(); // 初始化地图
-	void _initialize_items();
+	bn::affine_bg_ptr _initialize(const std::vector<std::vector<int>>& map_data);
 	void update_items(int x, int y);
-	int _generate_random_tile(); // 生成随机地形
 };
 
 #endif // MAP_H
