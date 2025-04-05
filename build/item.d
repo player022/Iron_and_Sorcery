@@ -57,7 +57,9 @@ item.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/item.cpp \
  D:/GBA/butano-master/butano/include/bn_sprite_font.h \
  D:/GBA/butano-master/butano/include/bn_utf8_characters_map.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_source_han_sans_jp.h \
- D:/GBA/butano-master/butano/include/bn_sprite_item.h
+ D:/GBA/butano-master/butano/include/bn_sprite_item.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/itemObserver.h \
+ D:/GBA/butano-master/butano/include/bn_keypad.h
 D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item.h:
 D:/GBA/butano-master/butano/include/bn_log.h:
 D:/GBA/butano-master/butano/include/bn_config_log.h:
@@ -117,3 +119,5 @@ D:/GBA/butano-master/butano/include/bn_sprite_font.h:
 D:/GBA/butano-master/butano/include/bn_utf8_characters_map.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_source_han_sans_jp.h:
 D:/GBA/butano-master/butano/include/bn_sprite_item.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/itemObserver.h:
+D:/GBA/butano-master/butano/include/bn_keypad.h:

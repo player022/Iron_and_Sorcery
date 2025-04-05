@@ -2,12 +2,11 @@
 #define DOOR_H
 
 #include "item.h"
-#include "doorObserver.h"
 
 class Door : public Item
 {
 public:
-	Door(int door_id, int x, int y, int columns, int rows);
+	Door(int door_id, int x, int y);
 	virtual ~Door() {}  // 添加虚析构函数
 
 	//具体精灵更新函数
@@ -16,24 +15,28 @@ public:
 	// 获取占据的格子
 	std::vector<std::pair<int, int>> get_occupied_cells() const override;
 
-	//提示文字
-	void show_prompt(bool show) override;
+	// 返回物品名称
+	bn::string_view get_name() const override;
 
 	//交互动作
-	virtual void on_interact() override;
+	void on_interact() override;
+
+	//设置优先级
+	void update_priority(bool inside) override { 
+		if (inside) {
+			sprite.set_z_order(100 - _y);
+		}else{
+			sprite.set_z_order(0);
+		}
+	}
 
 	// 设置观察者
-	void set_observer(DoorObserver* observer) { _observer = observer; }
+	void set_observer(ItemObserver* observer)override { _observer = observer; }
 private:
 	int _id;
 	bn::sprite_ptr sprite;
 
-	DoorObserver* _observer = nullptr;  // 观察者指针（不拥有）
-
-	//bn::string_view interact_message;
-	bn::vector<bn::sprite_ptr, 128> text_sprites;
-	bn::sprite_text_generator text_generator;
-	bool prompt_visible = false;
+	ItemObserver* _observer = nullptr;  // 观察者指针（不拥有）
 
 	bn::sprite_ptr create_sprite(int id);
 };

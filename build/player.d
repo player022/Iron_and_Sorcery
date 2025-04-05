@@ -56,6 +56,9 @@ player.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/player.cpp \
  D:/GBA/butano-master/butano/include/bn_sprite_font.h \
  D:/GBA/butano-master/butano/include/bn_string_view.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/include/map.h \
+ D:/GBA/butano-master/butano/include/bn_log.h \
+ D:/GBA/butano-master/butano/include/bn_config_log.h \
+ D:/GBA/butano-master/butano/include/bn_log_backend.h \
  D:/GBA/butano-master/butano/include/bn_core.h \
  D:/GBA/butano-master/butano/include/bn_vblank_callback_type.h \
  D:/GBA/butano-master/butano/include/bn_bg_tiles.h \
@@ -78,10 +81,11 @@ player.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/player.cpp \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h \
  D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item.h \
- D:/GBA/butano-master/butano/include/bn_log.h \
- D:/GBA/butano-master/butano/include/bn_config_log.h \
- D:/GBA/butano-master/butano/include/bn_log_backend.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/include/doorObserver.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/itemObserver.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/house.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/tree.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/door.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/equipment.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_head.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_body.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_foot.h \
@@ -147,6 +151,9 @@ D:/GBA/butano-master/butano/include/bn_camera_ptr.h:
 D:/GBA/butano-master/butano/include/bn_sprite_font.h:
 D:/GBA/butano-master/butano/include/bn_string_view.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/include/map.h:
+D:/GBA/butano-master/butano/include/bn_log.h:
+D:/GBA/butano-master/butano/include/bn_config_log.h:
+D:/GBA/butano-master/butano/include/bn_log_backend.h:
 D:/GBA/butano-master/butano/include/bn_core.h:
 D:/GBA/butano-master/butano/include/bn_vblank_callback_type.h:
 D:/GBA/butano-master/butano/include/bn_bg_tiles.h:
@@ -169,10 +176,11 @@ D:/GBA/butano-master/butano/include/bn_bg_palette_item.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h:
 D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item.h:
-D:/GBA/butano-master/butano/include/bn_log.h:
-D:/GBA/butano-master/butano/include/bn_config_log.h:
-D:/GBA/butano-master/butano/include/bn_log_backend.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/include/doorObserver.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/itemObserver.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/house.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/tree.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/door.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/equipment.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_head.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_body.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_foot.h:

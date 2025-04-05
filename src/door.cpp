@@ -2,11 +2,9 @@
 #include "bn_sprite_items_door.h"
 #include "bn_log.h"
 
-Door::Door(int door_id, int x, int y, int columns, int rows) :
-	Item(x, y,columns,rows), _id(door_id), sprite(create_sprite(door_id)),
-	text_generator(source_han_sans_jp_sprite_font)
+Door::Door(int door_id, int x, int y) :
+	Item(x, y), _id(door_id), sprite(create_sprite(door_id))
 {
-	sprite.set_z_order(y);
 }
 
 void Door::update_sprites(int new_x, int new_y)
@@ -14,20 +12,8 @@ void Door::update_sprites(int new_x, int new_y)
 	sprite.set_position(new_x, new_y);
 }
 
-void Door::show_prompt(bool show)
-{
-	if (prompt_visible == show)
-	{
-		return;
-	}
-
-	prompt_visible = show;
-	text_sprites.clear();
-
-	if (prompt_visible)
-	{
-		text_generator.generate(-10, -50, interact_message, text_sprites);
-	}
+bn::string_view Door::get_name() const{
+	return interact_message;  // 这里可以返回物品的名称或描述
 }
 
 void Door::on_interact()
@@ -36,7 +22,6 @@ void Door::on_interact()
 	switch (_id)
 	{
 	case 1:
-		text_sprites.clear();
 		if (interact_message == "开门")
 		{
 			is_open = true;
@@ -48,7 +33,6 @@ void Door::on_interact()
 			interact_message = "开门";
 			sprite.set_tiles(bn::sprite_items::door.tiles_item(), 0); // 切换到第 0 帧（门关闭）
 		}
-		text_generator.generate(-10, -50, interact_message, text_sprites);
 		break;
 
 	default:
@@ -58,7 +42,7 @@ void Door::on_interact()
 	// 通知观察者（如果有的话）
 	if (_observer)
 	{
-		_observer->on_door_state_changed(64-_x, 64-_y, is_open);
+		_observer->on_door_state_changed(_x, _y, is_open);
 	}
 }
 

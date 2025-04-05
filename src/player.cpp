@@ -80,9 +80,9 @@ void Player::horizontal_flip(bool direction)
 //更新优先度
 void Player::update_priority(int y)
 {
-	foot_sprite.set_z_order(y);
-	body_sprite.set_z_order(y);
-	head_sprite.set_z_order(y);
+	foot_sprite.set_z_order(100-y);
+	body_sprite.set_z_order(100-y);
+	head_sprite.set_z_order(100-y);
 }
 
 void Player::change_equipment(int equipment_id)

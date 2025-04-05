@@ -1,13 +1,10 @@
 #include "tree.h"
 #include "bn_sprite_items_tree1.h"
 
-Tree::Tree(int tree_id, int x, int y, int columns, int rows):
-	Item(x,y,columns,rows), _id(tree_id), sprites(create_sprite(tree_id))
+Tree::Tree(int tree_id, int x, int y):
+	Item(x,y), _id(tree_id), sprites(create_sprite(tree_id))
 {
-	for (auto& sprite : sprites)
-	{
-		sprite.set_z_order(y);
-	}
+	BN_LOG("tree init");
 }
 
 void Tree::update_sprites(int new_x, int new_y)
@@ -38,6 +35,15 @@ bn::vector<bn::sprite_ptr, 2> Tree::create_sprite(int id)
 		offset_y = 21;
 		sprites.push_back(bn::sprite_items::tree1.create_sprite(2)); // 下半部分
 		sprites.push_back(bn::sprite_items::tree1.create_sprite(3)); // 上半部分
+		break;
+
+	case 3:
+		height = 1;
+		width = 1;
+		offset_x = 5;
+		offset_y = 21;
+		sprites.push_back(bn::sprite_items::tree1.create_sprite(4)); // 下半部分
+		sprites.push_back(bn::sprite_items::tree1.create_sprite(5)); // 上半部分
 		break;
 
 	default:

@@ -6,7 +6,7 @@
 class House : public Item
 {
 public:
-	House(int house_id, int x, int y, int columns, int rows);
+	House(int house_id, int x, int y);
 	virtual ~House() {}  // 添加虚析构函数
 
 	//具体精灵更新函数
@@ -15,11 +15,21 @@ public:
 	// 获取占据的格子
 	std::vector<std::pair<int, int>> get_occupied_cells() const override;
 
-	//没有提示文字，不实现
-	void show_prompt(bool show) override {}
-
-	//没有交互动作，不实现
-	virtual void on_interact() override {}
+	//设置优先级
+	void update_priority(bool inside) override {
+		if (inside) {
+			for (auto& sprite : sprites)
+			{
+				sprite.set_z_order(100 - _y);
+			}
+		}
+		else {
+			for (auto& sprite : sprites)
+			{
+				sprite.set_z_order(0);
+			}
+		}
+	}
 private:
 	int _id;
 	int width, height;   //物品的长宽高

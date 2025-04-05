@@ -1,0 +1,1 @@
+item_menu_cursor_bn_gfx.o: item_menu_cursor_bn_gfx.s

@@ -1,13 +1,11 @@
 #include "house.h"
 #include "bn_sprite_items_wood_house.h"
 
-House::House(int house_id, int x, int y, int columns, int rows) :
-	Item(x, y,columns,rows), _id(house_id), sprites(create_sprite(house_id))
+#include "bn_log.h"
+
+House::House(int house_id, int x, int y) :
+	Item(x, y), _id(house_id), sprites(create_sprite(house_id))
 {
-	for (auto& sprite : sprites)
-	{
-		sprite.set_z_order(y);
-	}
 }
 
 void House::update_sprites(int new_x, int new_y)
@@ -25,9 +23,9 @@ bn::vector<bn::sprite_ptr, 2> House::create_sprite(int id)
 	case 1: // 木屋（分成两个部分）
 		height = 9;
 		width = 6;
-		anchor_x = 3;
+		anchor_x = 2;
 		anchor_y = 8;
-		offset_x = 0;
+		offset_x = 8;
 		offset_y = -24;
 		sprites.push_back(bn::sprite_items::wood_house.create_sprite(0)); // 下半部分
 		sprites.push_back(bn::sprite_items::wood_house.create_sprite(1)); // 上半部分

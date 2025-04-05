@@ -1,11 +1,8 @@
 map.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/map.cpp \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/include/map.h \
- D:/GBA/butano-master/butano/include/bn_core.h \
- D:/GBA/butano-master/butano/include/bn_span.h \
- D:/GBA/butano-master/butano/include/bn_array.h \
- D:/GBA/butano-master/butano/include/bn_assert.h \
- D:/GBA/butano-master/butano/include/bn_config_assert.h \
- D:/GBA/butano-master/butano/include/bn_version.h \
+ D:/GBA/butano-master/butano/include/bn_log.h \
+ D:/GBA/butano-master/butano/include/bn_config_log.h \
+ D:/GBA/butano-master/butano/include/bn_log_backend.h \
  D:/GBA/butano-master/butano/include/bn_common.h \
  D:/GBA/butano-master/butano/hw/include/bn_hw_common.h \
  D:/GBA/butano-master/butano/include/bn_config_doxygen.h \
@@ -17,6 +14,12 @@ map.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/map.cpp \
  D:/GBA/butano-master/butano/include/bn_functional.h \
  D:/GBA/butano-master/butano/include/bn_alignment.h \
  D:/GBA/butano-master/butano/include/bn_type_traits.h \
+ D:/GBA/butano-master/butano/include/bn_core.h \
+ D:/GBA/butano-master/butano/include/bn_span.h \
+ D:/GBA/butano-master/butano/include/bn_array.h \
+ D:/GBA/butano-master/butano/include/bn_assert.h \
+ D:/GBA/butano-master/butano/include/bn_config_assert.h \
+ D:/GBA/butano-master/butano/include/bn_version.h \
  D:/GBA/butano-master/butano/include/bn_assert_callback_type.h \
  D:/GBA/butano-master/butano/include/bn_utility.h \
  D:/GBA/butano-master/butano/include/bn_iterator.h \
@@ -55,9 +58,6 @@ map.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/map.cpp \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h \
  D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item.h \
- D:/GBA/butano-master/butano/include/bn_log.h \
- D:/GBA/butano-master/butano/include/bn_config_log.h \
- D:/GBA/butano-master/butano/include/bn_log_backend.h \
  D:/GBA/butano-master/butano/include/bn_vector.h \
  D:/GBA/butano-master/butano/include/bn_vector_fwd.h \
  D:/GBA/butano-master/butano/include/bn_sprite_ptr.h \
@@ -80,15 +80,15 @@ map.o: D:/GBA/butano-master/examples/Iron_and_Sorcery/src/map.cpp \
  D:/GBA/butano-master/butano/include/bn_utf8_characters_map.h \
  D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_source_han_sans_jp.h \
  D:/GBA/butano-master/butano/include/bn_sprite_item.h \
- D:/GBA/butano-master/examples/Iron_and_Sorcery/include/doorObserver.h \
- D:/GBA/butano-master/butano/include/bn_keypad.h
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/itemObserver.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/house.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/tree.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/door.h \
+ D:/GBA/butano-master/examples/Iron_and_Sorcery/include/equipment.h
 D:/GBA/butano-master/examples/Iron_and_Sorcery/include/map.h:
-D:/GBA/butano-master/butano/include/bn_core.h:
-D:/GBA/butano-master/butano/include/bn_span.h:
-D:/GBA/butano-master/butano/include/bn_array.h:
-D:/GBA/butano-master/butano/include/bn_assert.h:
-D:/GBA/butano-master/butano/include/bn_config_assert.h:
-D:/GBA/butano-master/butano/include/bn_version.h:
+D:/GBA/butano-master/butano/include/bn_log.h:
+D:/GBA/butano-master/butano/include/bn_config_log.h:
+D:/GBA/butano-master/butano/include/bn_log_backend.h:
 D:/GBA/butano-master/butano/include/bn_common.h:
 D:/GBA/butano-master/butano/hw/include/bn_hw_common.h:
 D:/GBA/butano-master/butano/include/bn_config_doxygen.h:
@@ -100,6 +100,12 @@ D:/GBA/butano-master/butano/include/bn_algorithm.h:
 D:/GBA/butano-master/butano/include/bn_functional.h:
 D:/GBA/butano-master/butano/include/bn_alignment.h:
 D:/GBA/butano-master/butano/include/bn_type_traits.h:
+D:/GBA/butano-master/butano/include/bn_core.h:
+D:/GBA/butano-master/butano/include/bn_span.h:
+D:/GBA/butano-master/butano/include/bn_array.h:
+D:/GBA/butano-master/butano/include/bn_assert.h:
+D:/GBA/butano-master/butano/include/bn_config_assert.h:
+D:/GBA/butano-master/butano/include/bn_version.h:
 D:/GBA/butano-master/butano/include/bn_assert_callback_type.h:
 D:/GBA/butano-master/butano/include/bn_utility.h:
 D:/GBA/butano-master/butano/include/bn_iterator.h:
@@ -138,9 +144,6 @@ D:/GBA/butano-master/butano/include/bn_bg_palette_item.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_affine_bg_tiles_items_tiles.h:
 D:/GBA/butano-master/butano/include/bn_affine_bg_tiles_item.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/include/item.h:
-D:/GBA/butano-master/butano/include/bn_log.h:
-D:/GBA/butano-master/butano/include/bn_config_log.h:
-D:/GBA/butano-master/butano/include/bn_log_backend.h:
 D:/GBA/butano-master/butano/include/bn_vector.h:
 D:/GBA/butano-master/butano/include/bn_vector_fwd.h:
 D:/GBA/butano-master/butano/include/bn_sprite_ptr.h:
@@ -163,5 +166,8 @@ D:/GBA/butano-master/butano/include/bn_sprite_font.h:
 D:/GBA/butano-master/butano/include/bn_utf8_characters_map.h:
 D:/GBA/butano-master/examples/Iron_and_Sorcery/build/bn_sprite_items_source_han_sans_jp.h:
 D:/GBA/butano-master/butano/include/bn_sprite_item.h:
-D:/GBA/butano-master/examples/Iron_and_Sorcery/include/doorObserver.h:
-D:/GBA/butano-master/butano/include/bn_keypad.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/itemObserver.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/house.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/tree.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/door.h:
+D:/GBA/butano-master/examples/Iron_and_Sorcery/include/equipment.h:
